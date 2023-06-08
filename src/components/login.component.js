@@ -15,6 +15,7 @@ export default class Login extends Component {
             <div className="text-center mb-3">
               <img src={image} className="center" alt="Imagen de inicio de sesión" />
             </div>
+            <form>
             <div className="mb-3">
               <input
                 type="email"
@@ -43,6 +44,7 @@ export default class Login extends Component {
             <p className="forgot-password text-right">
               <a href="#">¿Olvidaste tu contraseña?</a>
             </p>
+            </form>
           </Card.Body>
         </Card>
       </div>

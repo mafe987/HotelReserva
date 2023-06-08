@@ -21,8 +21,8 @@ export default class SignUp extends Component {
                   className="form-control"
                   placeholder="Nombre completo"
                   maxLength="50"
-                  pattern="[a-z]{1,15}"
-                  title="El nombre sólo puede contener letras minúsculas, por ejemplo, john martinez"
+                  pattern="^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$"
+                  title="El nombre sólo puede contener letras,por ejemplo, Daniel Hurtado"
                   required
                 />
               </div>
@@ -37,8 +37,8 @@ export default class SignUp extends Component {
                   type="password"
                   className="form-control"
                   placeholder="Contraseña"
-                  pattern="(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
-                  title="La contraseña debe contener mínimo 6 caracteres, 1 mayúscula, 1 minúscula y 1 número o carácter especial"
+                  pattern="(?=^.{8,}$)"
+                  title="La contraseña debe contener mínimo 8 caracteres"
                   required
                 />
               </div>
@@ -47,7 +47,7 @@ export default class SignUp extends Component {
                   type="password"
                   className="form-control"
                   placeholder="Confirmar contraseña"
-                  pattern="(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                  pattern="(?=^.{8,}$)"
                   title="La contraseña debe contener mínimo 6 caracteres, 1 mayúscula, 1 minúscula y 1 número o carácter especial"
                   required
                 />

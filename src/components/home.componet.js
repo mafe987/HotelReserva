@@ -12,23 +12,23 @@ const Home = () => {
           <Form className="home-form">
             <Form.Group controlId="arrival">
               <Form.Label>Llegada</Form.Label>
-              <Form.Control type="datetime-local" />
+              <Form.Control type="datetime-local" required/>
             </Form.Group>
             <Form.Group controlId="departure">
               <Form.Label>Salida</Form.Label>
-              <Form.Control type="datetime-local" />
+              <Form.Control type="datetime-local" required/>
             </Form.Group>
             <Form.Group controlId="guests">
               <Form.Label>Adultos</Form.Label>
-              <Form.Control type="number" min="0" />
+              <Form.Control type="number" min="1" required/>
             </Form.Group>
             <Form.Group controlId="children">
               <Form.Label>Niños</Form.Label>
-              <Form.Control type="number" min="0" />
+              <Form.Control type="number" min="0" required />
             </Form.Group>
             <Form.Group controlId="room">
               <Form.Label>Habitación</Form.Label>
-              <Form.Control type="number" min="1" />
+              <Form.Control type="number" min="1" required/>
             </Form.Group>
             <div className="search-button-container">
               <Button variant="primary" type="submit">
