@@ -1,16 +1,35 @@
 import React from 'react';
-import image from '../images/Ubicacion.png';
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
 const Maps = () => {
-    return (
-        <div className="card map-card">
-            <div className="card-body">
-                <h5 className="card-title">Mapa</h5>
-                {/* Aquí puedes agregar el código para mostrar el mapa */}
-                <img src={image} className="center" alt="Ubicacion" />
-            </div>
-        </div>
-    );
+  const mapStyles = {
+    height: "400px",
+    width: "100%"
+  };
+
+  const defaultCenter = {
+    lat: 4.137248344090655,
+    lng: -73.58812947190529
+  };
+
+  const markerPosition = {
+    lat: 4.137248344090655,
+    lng: -73.58812947190529
+  };
+
+
+
+  return (
+    <LoadScript googleMapsApiKey="AIzaSyDVnrXdzswSZ0Jll_ZQ29KFOaLoL6yzOsQ">
+      <GoogleMap
+        mapContainerStyle={mapStyles}
+        zoom={18}
+        center={defaultCenter}
+      >
+        <Marker position={markerPosition} />
+      </GoogleMap>
+    </LoadScript>
+  );
 };
 
 export default Maps;
