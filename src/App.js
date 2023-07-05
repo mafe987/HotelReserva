@@ -80,12 +80,12 @@ function App() {
           <Route path="/ReservationForm" element={<ReservationForm/>} />
         </Routes>
       </div>
-      <div style={{ fontSize: `${fontSize}px` }}></div>
+      <div style={{ fontSize: `${fontSize}px` }}>
         <Footer />
-    </div>
+      </div>
+      </div>
       </Router >
     </FontSizeContext.Provider >
   );
 }
-
 export default App;

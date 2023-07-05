@@ -107,7 +107,7 @@ export default class SignUp extends Component {
                 </button>
               </div>
               <p className="forgot-password text-right">
-                ¿Yaestás registrado? <Link to="/iniciar-sesion">Inicia sesión</Link>
+                ¿Ya estás registrado? <Link to="/iniciar-sesion">Inicia sesión</Link>
               </p>
             </form>
           </Card.Body>
