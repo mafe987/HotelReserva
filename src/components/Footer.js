@@ -1,7 +1,8 @@
 import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
-import { GrFacebook } from "react-icons/gr";
-import { BsFillEnvelopeFill, BsFillTelephoneFill,BsFillHouseFill,BsInstagram,BsGoogle} from "react-icons/bs";
+import { GrFacebook } from 'react-icons/gr';
+import { BsFillEnvelopeFill, BsFillTelephoneFill, BsFillHouseFill, BsInstagram, BsGoogle } from 'react-icons/bs';
+
 function Footer() {
   return (
     <MDBFooter bgColor="light" className="text-center text-lg-start text-muted">
@@ -11,13 +12,13 @@ function Footer() {
         </div>
 
         <div>
-          <a href="" className="me-4 text-reset">
-            <GrFacebook/>
+          <a href="#" className="me-4 text-reset">
+            <GrFacebook />
           </a>
-          <a href="" className="me-4 text-reset">
-            <BsGoogle/>
+          <a href="#" className="me-4 text-reset">
+            <BsGoogle />
           </a>
-          <a href="" className="me-4 text-reset">
+          <a href="#" className="me-4 text-reset">
             <BsInstagram />
           </a>
         </div>
@@ -29,32 +30,32 @@ function Footer() {
             <MDBCol md="3" lg="4" xl="3" className="mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">
                 <MDBIcon icon="gem" className="me-3" />
-                ¿Quiénes somos?
+                Hotel Casa Real
               </h6>
               <p>
-              Somos un hotel ubicado en San josé del Guaviare. Día a día construimos nuevas experiencias 
-              para ofrecerte el servicio que mereces. Te invitamos a que disfrutes de este espacio lleno de valores y buenas energías.
+                Día a día construimos nuevas experiencias para ofrecerte el servicio que mereces. Estamos ubicados en
+                Villavicencio. Te invitamos a que disfrutes de este espacio lleno de valores y buenas energías.
               </p>
             </MDBCol>
             <MDBCol md="3" lg="2" xl="2" className="mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">Enlaces útiles</h6>
               <p>
-                <a href="" className="text-reset">
+                <a href="#" className="text-reset">
                   Mapa de sitio
                 </a>
               </p>
               <p>
-                <a href="" className="text-reset">
+                <a href="#" className="text-reset">
                   #############
                 </a>
               </p>
               <p>
-                <a href="" className="text-reset">
+                <a href="#" className="text-reset">
                   #############
                 </a>
               </p>
               <p>
-                <a href="" className="text-reset">
+                <a href="#" className="text-reset">
                   #############
                 </a>
               </p>
@@ -64,14 +65,14 @@ function Footer() {
               <h6 className="text-uppercase fw-bold mb-4">Contáctanos</h6>
               <p>
                 <BsFillHouseFill />
-                   San josé del Guaviare,Guaviare
+                Colombia, Villavicencio-Meta
               </p>
               <p>
-                <BsFillEnvelopeFill/>
-                  HotelCasaReal@gmail.com
+                <BsFillEnvelopeFill />
+                HotelCasaReal@gmail.com
               </p>
               <p>
-                <BsFillTelephoneFill />  + 57 310 345 6789
+                <BsFillTelephoneFill /> +57 310 345 6789
               </p>
             </MDBCol>
           </MDBRow>

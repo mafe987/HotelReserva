@@ -29,6 +29,11 @@ function HumanTest() {
     const result = calculateResult();
     const userAnswer = parseInt(answer);
 
+    if (isNaN(userAnswer)) {
+      // La respuesta no es un número válido
+      return;
+    }
+
     if (userAnswer === result) {
       setIsCorrect(true);
     } else {
@@ -73,6 +78,7 @@ function HumanTest() {
             <div className="col">
               <input
                 type="number"
+                inputMode="numeric"
                 className="form-control"
                 placeholder="Resultado"
                 value={answer}

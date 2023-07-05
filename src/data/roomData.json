@@ -1,0 +1,16 @@
+{
+    "rooms": [
+      {
+        "id": 1,
+        "capacity": 2,
+        "photo": "/images/hab1.jpg"
+      },
+      {
+        "id": 2,
+        "capacity": 4,
+        "photo": "/images/hab2.jpeg"
+      }
+   
+    ]
+  }
+  
