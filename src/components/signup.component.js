@@ -41,7 +41,7 @@ export default class SignUp extends Component {
   render() {
     return (
       <div className="d-flex justify-content-center">
-        <Card style={{  marginTop: '7rem' }}>
+        <Card style={{ marginTop: '7rem', maxWidth: '400px' }}>
           <Card.Body>
             <Card.Title className="text-center">Registro en Hotel Casa Real</Card.Title>
             <div className="text-center mb-3">
@@ -107,7 +107,7 @@ export default class SignUp extends Component {
                 </button>
               </div>
               <p className="forgot-password text-right">
-                ¿Ya estás registrado? <Link to="/iniciar-sesion">Inicia sesión</Link>
+                ¿Yaestás registrado? <Link to="/iniciar-sesion">Inicia sesión</Link>
               </p>
             </form>
           </Card.Body>

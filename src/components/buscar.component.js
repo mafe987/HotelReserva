@@ -77,7 +77,7 @@ const Reservas = () => {
   };
 
   return (
-    <div className="home-card d-flex align-items-center justify-content-center">
+    <div className="home-card d-flex align-items-center justify-content-center" style={{ marginTop: '7rem' }}>
       <div className="home-form-container">
         <Form className="home-form" onSubmit={handleSubmit}>
           <Form.Group controlId="arrival">

@@ -19,7 +19,7 @@ const RoomList = () => {
                   <h5 className="card-title">Habitación {room.id}</h5>
                   <p className="card-text">Capacidad: {room.capacity}</p>
                   <button className="btn btn-primary">
-                    <Link to="/iniciar-sesion" className="enlace">Reservar</Link>
+                    <Link to="/ReservationForm" className="enlace">Reservar</Link>
                   </button>
                 </div>
               </div>

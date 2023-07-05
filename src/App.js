@@ -14,6 +14,8 @@ import SignUp from './components/signup.component';
 import Home from './components/home.componet';
 import Footer from './components/Footer';
 import UserInfo from './components/UserInfo';
+import SiteMap from './components/mapaSitio';
+import ReservationForm from './components/formReservas';
 
 // Crea un contexto para compartir el estado del tamaño de fuente
 export const FontSizeContext = createContext();
@@ -35,13 +37,14 @@ function App() {
         <div className="App">
           <Navbar expand="lg" bg="light" variant="light" fixed="top">
             <div className="container">
-              <Navbar.Brand as={Link} to="/home">Inicio</Navbar.Brand>
+              <Navbar.Brand as={Link} to="/">Inicio</Navbar.Brand>
               <Navbar.Toggle aria-controls="navbarTogglerDemo02" />
               <Navbar.Collapse id="navbarTogglerDemo02">
                 <Nav className="mr-auto">
                   <Nav.Link as={Link} to="/iniciar-sesion">Iniciar sesión</Nav.Link>
                   <Nav.Link as={Link} to="/registro">Registrarme</Nav.Link>
                   <Nav.Link as={Link} to="/UserInfo">Información</Nav.Link>
+                  <Nav.Link as={Link} to="/ReservationForm">Reservar</Nav.Link>
                 </Nav>
                 <Nav className="ml-auto">
                   <Dropdown>
@@ -68,15 +71,17 @@ function App() {
 
       <div style={{ fontSize: `${fontSize}px` }}>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
+        
           <Route path="/iniciar-sesion" element={<Login />} />
           <Route path="/registro" element={<SignUp />} />
           <Route path="/UserInfo" element={<UserInfo />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/SiteMap" element={<SiteMap/>} />
+          <Route path="/ReservationForm" element={<ReservationForm/>} />
         </Routes>
       </div>
-
-      <Footer />
+      <div style={{ fontSize: `${fontSize}px` }}></div>
+        <Footer />
     </div>
       </Router >
     </FontSizeContext.Provider >

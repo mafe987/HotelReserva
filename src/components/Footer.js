@@ -40,7 +40,7 @@ function Footer() {
             <MDBCol md="3" lg="2" xl="2" className="mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">Enlaces útiles</h6>
               <p>
-                <a href="#" className="text-reset">
+                <a href="/SiteMap" className="text-reset">
                   Mapa de sitio
                 </a>
               </p>
