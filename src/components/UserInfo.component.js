@@ -14,8 +14,8 @@ const UserInfo = () => {
 
   return (
     <Container style={{ marginTop: '7rem' }}>
-      <Row className="justify-content-center">
-        <Col md={6} className="mb-4">
+      <Row className="d-flex justify-content-center">
+        <Col md={8} lg={6} xl={5} className="mb-4">
           <Card className="h-100 shadow">
             <Card.Body>
               <Tab.Container defaultActiveKey="personalInfo">
@@ -78,4 +78,4 @@ const UserInfo = () => {
   );
 };
 
-export default UserInfo;
+export default UserInfo

@@ -8,7 +8,7 @@ import Nav from 'react-bootstrap/Nav';
 
 import data from '../data/user.json'; // Importa el archivo JSON
 
-const UserInfo = () => {
+const AdminInfo = () => {
   const userData = data.userData;
   const reservationData = data.reservationData;
 
@@ -16,13 +16,16 @@ const UserInfo = () => {
     <Container style={{ marginTop: '7rem' }}>
       <Row className="justify-content-center">
         <Col md={6} className="mb-4">
-          <Card className="h-100 shadow">
+          <Card className="shadow">
             <Card.Body>
+              <Tab.Container defaultActiveKey="personalInfo">
                 <Nav variant="tabs" className="mb-4">
                   <Nav.Item>
-                    <Nav eventKey="personalInfo">Información personal</Nav>
+                    <Nav.Link eventKey="personalInfo">Información personal</Nav.Link>
                   </Nav.Item>
                 </Nav>
+                <Tab.Content>
+                  <Tab.Pane eventKey="personalInfo">
                     <div className="mb-3">
                       <span className="info-label">Nombre:</span>
                       <input className="form-control" type="text" value={userData.name} readOnly />
@@ -35,6 +38,9 @@ const UserInfo = () => {
                       <span className="info-label">Correo electrónico:</span>
                       <input className="form-control" type="email" value={userData.email} readOnly />
                     </div>
+                  </Tab.Pane>
+                </Tab.Content>
+              </Tab.Container>
             </Card.Body>
           </Card>
         </Col>
@@ -43,4 +49,4 @@ const UserInfo = () => {
   );
 };
 
-export default UserInfo;
+export default AdminInfo;
