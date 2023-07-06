@@ -8,8 +8,8 @@ export default class SignUp extends Component {
     return (
       <div className="d-flex justify-content-center">
         <Card style={{ maxWidth: '400px', marginTop: '5rem' }}>
-          <Card.Body>
-            <Card.Title className="text-center">Registro en Hotel Casa Real</Card.Title>
+          <Card.Body> <Card.Header as="h5">Registro en Hotel Casa Real</Card.Header>
+            <Card.Title className="text-center"></Card.Title>
             <div className="text-center mb-3">
               <img src={image} className="center" alt="Imagen de registro" />
             </div>

@@ -1,16 +1,21 @@
-import React from 'react';
-import Card from 'react-bootstrap/Card';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Tab from 'react-bootstrap/Tab';
-import Nav from 'react-bootstrap/Nav';
-
-import data from '../data/user.json'; // Importa el archivo JSON
+import React, { useState, useEffect } from 'react';
+import { Card, Container, Row, Col, Tab, Nav } from 'react-bootstrap';
 
 const AdminInfo = () => {
-  const userData = data.userData;
-  const reservationData = data.reservationData;
+  const [userData, setUserData] = useState(null);
+  const [reservationData, setReservationData] = useState(null);
+
+  useEffect(() => {
+    fetch('URL_DEL_ENDPOINT') // Reemplaza 'URL_DEL_ENDPOINT' por la URL correcta de tu API para obtener la información del usuario y la reserva
+      .then(response => response.json())
+      .then(data => {
+        setUserData(data.userData);
+        setReservationData(data.reservationData);
+      })
+      .catch(error => {
+        console.error('Error al obtener los datos del usuario y la reserva:', error);
+      });
+  }, []);
 
   return (
     <Container style={{ marginTop: '7rem' }}>
@@ -26,18 +31,22 @@ const AdminInfo = () => {
                 </Nav>
                 <Tab.Content>
                   <Tab.Pane eventKey="personalInfo">
-                    <div className="mb-3">
-                      <span className="info-label">Nombre:</span>
-                      <input className="form-control" type="text" value={userData.name} readOnly />
-                    </div>
-                    <div className="mb-3">
-                      <span className="info-label">Número de documento:</span>
-                      <input className="form-control" type="text" value={userData.documentNumber} readOnly />
-                    </div>
-                    <div className="mb-3">
-                      <span className="info-label">Correo electrónico:</span>
-                      <input className="form-control" type="email" value={userData.email} readOnly />
-                    </div>
+                    {userData && (
+                      <div>
+                        <div className="mb-3">
+                          <span className="info-label">Nombre:</span>
+                          <input className="form-control" type="text" value={userData.name} readOnly />
+                        </div>
+                        <div className="mb-3">
+                          <span className="info-label">Número de documento:</span>
+                          <input className="form-control" type="text" value={userData.documentNumber} readOnly />
+                        </div>
+                        <div className="mb-3">
+                          <span className="info-label">Correo electrónico:</span>
+                          <input className="form-control" type="email" value={userData.email} readOnly />
+                        </div>
+                      </div>
+                    )}
                   </Tab.Pane>
                 </Tab.Content>
               </Tab.Container>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -6,17 +6,28 @@ import Col from 'react-bootstrap/Col';
 import Tab from 'react-bootstrap/Tab';
 import Nav from 'react-bootstrap/Nav';
 
-import data from '../data/user.json'; // Importa el archivo JSON
-
 const UserInfo = () => {
-  const userData = data.userData;
-  const reservationData = data.reservationData;
+  const [userData, setUserData] = useState({});
+  const [reservationData, setReservationData] = useState({});
+
+  useEffect(() => {
+    fetch('URL_DEL_ENDPOINT') // Reemplaza 'URL_DEL_ENDPOINT' por la URL correcta de tu API
+      .then(response => response.json())
+      .then(data => {
+        setUserData(data.userData);
+        setReservationData(data.reservationData);
+      })
+      .catch(error => {
+        console.error('Error al obtener los datos:', error);
+      });
+  }, []);
 
   return (
     <Container style={{ marginTop: '7rem' }}>
       <Row className="d-flex justify-content-center">
         <Col md={8} lg={6} xl={5} className="mb-4">
           <Card className="h-100 shadow">
+            <Card.Header as="h5">Reservas</Card.Header>
             <Card.Body>
               <Tab.Container defaultActiveKey="personalInfo">
                 <Nav variant="tabs" className="mb-4">
@@ -44,6 +55,12 @@ const UserInfo = () => {
                   </Tab.Pane>
                   <Tab.Pane eventKey="reservationInfo">
                     <div className="mb-3">
+                      <span className="info-label">ID de reserva:</span>
+                      <select className="form-select" value={reservationData.idReservation} readOnly>
+                        <option value={reservationData.idReservation}>{reservationData.idReservation}</option>
+                      </select>
+                    </div>
+                    <div className="mb-3">
                       <span className="info-label">Fecha de llegada:</span>
                       <input className="form-control" type="date" value={reservationData.arrivalDate} readOnly />
                     </div>
@@ -67,6 +84,10 @@ const UserInfo = () => {
                       <span className="info-label">Número de adultos:</span>
                       <input className="form-control" type="number" value={reservationData.adultsCount} readOnly />
                     </div>
+                    <div className="mb-3">
+                      <span className="info-label">Precio de la habitación:</span>
+                      <input className="form-control" type="text" value={reservationData.roomPrice} readOnly />
+                    </div>
                   </Tab.Pane>
                 </Tab.Content>
               </Tab.Container>
@@ -78,4 +99,4 @@ const UserInfo = () => {
   );
 };
 
-export default UserInfo
+export default UserInfo;

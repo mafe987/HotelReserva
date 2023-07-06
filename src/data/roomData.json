@@ -3,12 +3,15 @@
       {
         "id": 1,
         "capacity": 2,
-        "photo": "/images/hab1.jpg"
+        "photo": "/images/hab1.jpg",
+        "payment": 100000
+
       },
       {
         "id": 2,
         "capacity": 4,
-        "photo": "/images/hab2.jpeg"
+        "photo": "/images/hab2.jpeg",
+        "payment": 100000
       }
    
     ]

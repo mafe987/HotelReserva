@@ -22,7 +22,8 @@ export default class Login extends Component {
       <div className="d-flex justify-content-center">
         <Card style={{ maxWidth: '400px', marginTop: '5rem' }}>
           <Card.Body>
-            <Card.Title className="text-center">Inicio de sesión</Card.Title>
+            <Card.Header as="h5">Inicio de Sesión</Card.Header>
+            <Card.Title className="text-center"></Card.Title>
             <div className="text-center mb-3">
               <img src={image} className="center" alt="Imagen de inicio de sesión" />
             </div>
@@ -53,7 +54,7 @@ export default class Login extends Component {
                 </button>
               </div>
               <p className="forgot-password text-right">
-                <a href="#">¿Olvidaste tu contraseña?</a>
+                <a href="/SignUp">Registrarse</a>
               </p>
             </form>
           </Card.Body>
