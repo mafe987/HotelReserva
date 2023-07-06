@@ -1,7 +1,7 @@
 import React from 'react';
 //import { Alert, Button, Form } from 'react-bootstrap';
-import Buscar from './buscar.component';
-import RoomList from './RoomList';
+import Buscar from './search.component';
+import RoomList from './RoomList.component';
 import Maps from './maps.component';
 
 const Home = () => {
@@ -17,7 +17,7 @@ const Home = () => {
           {/* Listado de habitaciones */}
           <RoomList />
         </div>
-        <div className="maps-container">
+        <div className="maps-container" style={{ marginLeft: '1em', marginRight: '2em'}}>
           {/* Mapa */}
           <Maps />
         </div>

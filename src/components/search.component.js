@@ -77,7 +77,7 @@ const Reservas = () => {
   };
 
   return (
-    <div className="home-card d-flex align-items-center justify-content-center" style={{ marginTop: '7rem' }}>
+    <div className="home-card d-flex align-items-center justify-content-center" style={{ marginTop: '5rem' ,marginLeft: '2em', marginRight: '2em'}}>
       <div className="home-form-container">
         <Form className="home-form" onSubmit={handleSubmit}>
           <Form.Group controlId="arrival">
@@ -106,7 +106,7 @@ const Reservas = () => {
             <Form.Label>Adultos</Form.Label>
             <FormControl
               type="number"
-              min="0"
+              min="1"
               value={guests}
               onChange={(e) => setGuests(e.target.value)}
               required

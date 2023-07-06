@@ -1,49 +1,30 @@
-// Login.js
 import React, { Component } from 'react';
+import HumanTest from './HumanTest.component';
 import image from '../images/image-login.png';
 import Card from 'react-bootstrap/Card';
 
 export default class Login extends Component {
-  handleSubmit = async (event) => {
+  handleSubmit = (event) => {
     event.preventDefault();
+    const { isAnswerCorrect } = this.props;
 
-    // Obtener los datos del formulario
-    const email = event.target.email.value;
-    const password = event.target.password.value;
+    // Verificar las validaciones y realizar las acciones correspondientes
+    // ...
 
-    // Enviar los datos al servidor
-    try {
-      const response = await fetch('URL_DEL_ENDPOINT_DE_LOGIN', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ email, password })
-      });
-
-      if (response.ok) {
-        // Manejar la respuesta exitosa del servidor
-        console.log('Inicio de sesión exitoso');
-        // Redirigir a la página de inicio de sesión exitosa
-        // this.props.history.push('/dashboard');
-      } else {
-        // Manejar la respuesta de error del servidor
-        console.log('Error en el inicio de sesión');
-      }
-    } catch (error) {
-      // Manejar errores de conexión o errores inesperados
-      console.log('Error en el inicio de sesión', error);
-    }
-  };
+    // Ejemplo de redirección a una página después del inicio de sesión
+    // this.props.history.push('/dashboard');
+  }
 
   render() {
+    const { isAnswerCorrect } = this.props;
+
     return (
       <div className="d-flex justify-content-center">
-        <Card style={{ maxWidth: '400px', marginTop: '7rem' }}>
+        <Card style={{ maxWidth: '400px', marginTop: '5rem' }}>
           <Card.Body>
             <Card.Title className="text-center">Inicio de sesión</Card.Title>
             <div className="text-center mb-3">
-              <img src={image} className="center" alt="" />
+              <img src={image} className="center" alt="Imagen de inicio de sesión" />
             </div>
             <form onSubmit={this.handleSubmit}>
               <div className="mb-3">
@@ -51,7 +32,6 @@ export default class Login extends Component {
                   type="email"
                   className="form-control"
                   placeholder="Correo electrónico"
-                  name="email"
                   required
                 />
               </div>
@@ -60,9 +40,11 @@ export default class Login extends Component {
                   type="password"
                   className="form-control"
                   placeholder="Contraseña"
-                  name="password"
                   required
                 />
+              </div>
+              <div className="mb-3">
+                <HumanTest isAnswerCorrect={isAnswerCorrect} />
               </div>
 
               <div className="d-grid">

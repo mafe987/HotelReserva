@@ -8,16 +8,14 @@ const Maps = () => {
   };
 
   const defaultCenter = {
-    lat: 2.3334262371063232,
+    lat: 2.33342623710632,
     lng: -72.628662109375
   };
 
   const markerPosition = {
-    lat: 2.3334262371063232,
+    lat: 2.33342623710632,
     lng: -72.628662109375
   };
-
-
 
   return (
     <LoadScript googleMapsApiKey="AIzaSyDVnrXdzswSZ0Jll_ZQ29KFOaLoL6yzOsQ">

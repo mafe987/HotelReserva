@@ -33,8 +33,8 @@ function Footer() {
                 Hotel Casa Real
               </h6>
               <p>
-                Día a día construimos nuevas experiencias para ofrecerte el servicio que mereces. Estamos ubicados en
-                Villavicencio. Te invitamos a que disfrutes de este espacio lleno de valores y buenas energías.
+                Día a día construimos nuevas experiencias para ofrecerte el servicio que mereces. Estamos ubicados en 
+                San Jose del Guaviare. Te invitamos a que disfrutes de este espacio lleno de valores y buenas energías.
               </p>
             </MDBCol>
             <MDBCol md="3" lg="2" xl="2" className="mx-auto mb-4">
@@ -45,18 +45,18 @@ function Footer() {
                 </a>
               </p>
               <p>
-                <a href="#" className="text-reset">
-                  #############
+                <a href="/" className="text-reset">
+                  Busca tu habitación perfecta
                 </a>
               </p>
               <p>
-                <a href="#" className="text-reset">
-                  #############
+                <a href="/login" className="text-reset">
+                  Inicia Sesión
                 </a>
               </p>
               <p>
-                <a href="#" className="text-reset">
-                  #############
+                <a href="/SingUp" className="text-reset">
+                  Registrate
                 </a>
               </p>
             </MDBCol>
@@ -65,7 +65,7 @@ function Footer() {
               <h6 className="text-uppercase fw-bold mb-4">Contáctanos</h6>
               <p>
                 <BsFillHouseFill />
-                Colombia, Villavicencio-Meta
+                Colombia, San Jose del Guaviare
               </p>
               <p>
                 <BsFillEnvelopeFill />

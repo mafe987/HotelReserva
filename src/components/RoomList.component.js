@@ -6,7 +6,7 @@ const RoomList = () => {
   const { rooms } = roomData;
 
   return (
-    <div className="room-list">
+    <div className="room-list" style={{ marginLeft: '2em', marginRight: '1em'}}>
       <div className="card-deck">
         {rooms.map((room) => (
           <div key={room.id} className="card room-item">

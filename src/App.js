@@ -12,10 +12,11 @@ import { faUniversalAccess, faPlus, faMinus } from '@fortawesome/free-solid-svg-
 import Login from './components/login.component';
 import SignUp from './components/signup.component';
 import Home from './components/home.componet';
-import Footer from './components/Footer';
-import UserInfo from './components/UserInfo';
-import SiteMap from './components/mapaSitio';
-import ReservationForm from './components/formReservas';
+import Footer from './components/Footer.component';
+import UserInfo from './components/UserInfo.component';
+import SiteMap from './components/SiteMap.component';
+import ReservationForm from './components/formsReservations.component';
+import AdminInfo from './components/AdminInfo.component';
 
 // Crea un contexto para compartir el estado del tamaño de fuente
 export const FontSizeContext = createContext();
@@ -35,14 +36,14 @@ function App() {
     <FontSizeContext.Provider value={fontSize}>
       <Router>
         <div className="App">
-          <Navbar expand="lg" bg="light" variant="light" fixed="top">
+          <Navbar expand="lg" bg="light" variant="light" fixed="top" >
             <div className="container">
               <Navbar.Brand as={Link} to="/">Inicio</Navbar.Brand>
               <Navbar.Toggle aria-controls="navbarTogglerDemo02" />
               <Navbar.Collapse id="navbarTogglerDemo02">
                 <Nav className="mr-auto">
-                  <Nav.Link as={Link} to="/iniciar-sesion">Iniciar sesión</Nav.Link>
-                  <Nav.Link as={Link} to="/registro">Registrarme</Nav.Link>
+                  <Nav.Link as={Link} to="/login">Iniciar sesión</Nav.Link>
+                  <Nav.Link as={Link} to="/SignUp">Registrarme</Nav.Link>
                   <Nav.Link as={Link} to="/UserInfo">Información</Nav.Link>
                   <Nav.Link as={Link} to="/ReservationForm">Reservar</Nav.Link>
                 </Nav>
@@ -71,10 +72,10 @@ function App() {
 
       <div style={{ fontSize: `${fontSize}px` }}>
         <Routes>
-        
-          <Route path="/iniciar-sesion" element={<Login />} />
-          <Route path="/registro" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/SignUp" element={<SignUp />} />
           <Route path="/UserInfo" element={<UserInfo />} />
+          <Route path="/AdminInfo" element={<AdminInfo />} />
           <Route path="/" element={<Home />} />
           <Route path="/SiteMap" element={<SiteMap/>} />
           <Route path="/ReservationForm" element={<ReservationForm/>} />

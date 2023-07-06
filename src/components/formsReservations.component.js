@@ -29,7 +29,7 @@ const ReservationForm = () => {
   };
 
   return (
-    <div style={{ marginTop: '7em', marginLeft: '30em', maxWidth: '400px' }}>
+    <div style={{ marginTop: '7em', marginLeft: '30em', maxWidth: '400px' , marginBottom: '3em' }}>
       <Card>
         <Card.Header as="h5">Reservas</Card.Header>
         <Card.Body>
